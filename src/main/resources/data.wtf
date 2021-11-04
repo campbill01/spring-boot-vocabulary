@@ -1,0 +1,5 @@
+insert into words (id,word, meaning ) values (1,'hola', 'hello')
+insert into words (id,word, meaning ) values (2,'cerveza', 'beer')
+insert into words (id,word, meaning ) values (3,'banjo', 'bathroom')
+insert into words (id,word, meaning ) values (4,'leche', 'milk')
+insert into words (id,word, meaning ) values (5,'nina', 'girl')
