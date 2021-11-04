@@ -102,7 +102,7 @@ class wordServiceTest {
         Word word = new Word("createTest", "works");
         //Words resp = this.service.create(word.getWord(), word.getMeaning());
         Word resp = repository.save(word);
-        Word retrievedWord = repository.findFirstByOrderById();
+        Word retrievedWord = repository.findFirstByOrderByIdAsc();
         //Words retrievedWord = this.service.get(word);
         assertEquals(resp, retrievedWord);
     }

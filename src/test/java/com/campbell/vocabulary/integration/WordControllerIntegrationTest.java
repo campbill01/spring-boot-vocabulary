@@ -61,10 +61,13 @@ public class WordControllerIntegrationTest {
     @Order(2)
     @Test
     void get() throws Exception {
-        String result = mvc.perform(MockMvcRequestBuilders.get("/get")).andReturn().getResponse().getContentAsString();
+        mvc.perform(post("/words/add/{name}/{meaning}", "test","me"))
+                .andExpect(status().isOk());
+
+        String result = mvc.perform(MockMvcRequestBuilders.get("/get/{word}", "test")).andReturn().getResponse().getContentAsString();
         assertNotNull(result);
         logger.log(Level.ALL, "WordsController integration test: get, result is: " +result);
-        assertTrue(result.contains("\"id\":1"));
+        assertTrue(result.contains("\"name\":\"test\""));
     }
 
     @Order(3)

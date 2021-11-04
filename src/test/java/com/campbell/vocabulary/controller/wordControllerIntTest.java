@@ -45,7 +45,7 @@ class wordControllerIntTest {
     @Test
     void get() throws Exception {
         Word word = new Word("thing", "one");
-        Mockito.when(repository.findFirstByOrderById()).thenReturn(word);
+        Mockito.when(repository.findFirstByOrderByIdAsc()).thenReturn(word);
         String result = mvc.perform(MockMvcRequestBuilders.get("/get")).andReturn().getResponse().getContentAsString();
         logger.log(Level.ALL, "Testing get, the result was " + result);
         assertNotNull(result);

@@ -38,7 +38,7 @@ public class wordService {
     }
 
     public Word get(){
-        return wordrepository.findFirstByOrderById();
+        return wordrepository.findFirstByOrderByIdAsc();
     }
 
     public Word get(String word){
