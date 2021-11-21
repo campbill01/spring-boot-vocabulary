@@ -1,7 +1,7 @@
 package com.campbell.vocabulary.controller;
 
 import com.campbell.vocabulary.domain.Word;
-import com.campbell.vocabulary.service.wordService;
+import com.campbell.vocabulary.service.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,11 +13,11 @@ import java.util.Collections;
 import java.util.List;
 
 @Controller
-public class wordController {
-    final wordService wordService;
+public class WordController {
+    final WordService wordService;
 
     @Autowired
-    public wordController(wordService wordService) {
+    public WordController(WordService wordService) {
         this.wordService = wordService;
     }
 

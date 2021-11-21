@@ -1,8 +1,8 @@
 package com.campbell.vocabulary.controller;
 
 import com.campbell.vocabulary.domain.Word;
-import com.campbell.vocabulary.repository.wordRepository;
-import com.campbell.vocabulary.service.wordService;
+import com.campbell.vocabulary.repository.WordRepository;
+import com.campbell.vocabulary.service.WordService;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,23 +23,23 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @ExtendWith(SpringExtension.class)
-@WebMvcTest(wordController.class)
-class wordControllerIntTest {
+@WebMvcTest(WordController.class)
+class WordControllerIntTest {
 
     @Autowired
     private MockMvc mvc;
 
     @MockBean
-    private wordRepository repository;
+    private WordRepository repository;
 
     @SpyBean
-    private wordService service;
+    private WordService service;
 
-    private static Logger logger = LogManager.getLogger(wordControllerIntTest.class);
+    private static Logger logger = LogManager.getLogger(WordControllerIntTest.class);
 
     @BeforeEach
     public void setup(){
-        wordService service = new wordService(repository);
+        WordService service = new WordService(repository);
     }
 
     @Test

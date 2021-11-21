@@ -1,7 +1,7 @@
 package com.campbell.vocabulary.service;
 
 import com.campbell.vocabulary.domain.Word;
-import com.campbell.vocabulary.repository.wordRepository;
+import com.campbell.vocabulary.repository.WordRepository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -14,10 +14,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class wordServiceTest {
 
-    private wordService service;
+    private WordService service;
 
     @Autowired
-    private wordRepository repository;
+    private WordRepository repository;
 
     @BeforeAll
     void setUp() {
@@ -87,7 +87,7 @@ class wordServiceTest {
                 return null;
             }
         };*/
-        this.service = new wordService(this.repository);
+        this.service = new WordService(this.repository);
     }
 
     @Test

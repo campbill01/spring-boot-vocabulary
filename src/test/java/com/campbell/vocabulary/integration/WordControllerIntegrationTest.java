@@ -1,8 +1,8 @@
 package com.campbell.vocabulary.integration;
 
 import com.campbell.vocabulary.domain.Word;
-import com.campbell.vocabulary.repository.wordRepository;
-import com.campbell.vocabulary.service.wordService;
+import com.campbell.vocabulary.repository.WordRepository;
+import com.campbell.vocabulary.service.WordService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -35,10 +35,10 @@ public class WordControllerIntegrationTest {
     private ObjectMapper objectMapper;
 
     @Autowired
-    private wordRepository repository;
+    private WordRepository repository;
 
     @Autowired
-    private wordService service;
+    private WordService service;
 
 /*
     @BeforeEach

@@ -1,6 +1,7 @@
 package com.campbell.vocabulary.service;
 
 import com.campbell.vocabulary.domain.Word;
+import com.campbell.vocabulary.repository.WordRepository;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -18,10 +19,10 @@ import java.util.List;
 public class DataLoader {
 
     private static final String COMMA_DELIMITER = ",";
-    private final com.campbell.vocabulary.repository.wordRepository wordRepository;
+    private final WordRepository wordRepository;
 
     //@Autowired
-    public DataLoader(com.campbell.vocabulary.repository.wordRepository wordRepository){
+    public DataLoader(WordRepository wordRepository){
         this.wordRepository = wordRepository;
     }
 

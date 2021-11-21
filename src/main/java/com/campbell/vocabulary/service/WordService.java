@@ -1,7 +1,7 @@
 package com.campbell.vocabulary.service;
 
 import com.campbell.vocabulary.domain.Word;
-import com.campbell.vocabulary.repository.wordRepository;
+import com.campbell.vocabulary.repository.WordRepository;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,12 +13,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class wordService {
-    private final wordRepository wordrepository;
-    private static Logger logger = LogManager.getLogger(wordService.class);
+public class WordService {
+    private final WordRepository wordrepository;
+    private static Logger logger = LogManager.getLogger(WordService.class);
 
     @Autowired
-    public wordService(wordRepository wordrepository) {
+    public WordService(WordRepository wordrepository) {
         this.wordrepository = wordrepository;
     }
 
